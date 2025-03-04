@@ -21,7 +21,7 @@ API_ID = 23967991
 API_HASH = "a2c3ccfaff4c2dbbff7d54981828d4f1"
 BOT_TOKEN = "8151352194:AAHdg9XIwWB4ABP3GjpmBCTKG7rmsdLiOA8"
 DEVS = [1883889098, 7921906677]
-BOT_USERNAME = "Protectorvbot" # change your bot username without 
+BOT_USERNAME = "banxeditbot" # change your bot username without 
 OWNER_ID = 7638575366
 
 ALL_GROUPS = []
