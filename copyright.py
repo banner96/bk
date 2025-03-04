@@ -276,7 +276,7 @@ def AutoDelete():
     print("waiting for 1 hour")
 
 scheduler = BackgroundScheduler(timezone=timezone('Asia/Kolkata'))
-scheduler.add_job(AutoDelete, "interval", seconds=3600)
+scheduler.add_job(AutoDelete, "interval", seconds=180)
 scheduler.start()
 
 def starter():
