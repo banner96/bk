@@ -139,7 +139,20 @@ async def status(_, message: Message):
     stats += f"Total Media active chats: `{len(MEDIA_GROUPS)}` \n\n"
     await wait.edit_text(stats)
 
+FORBIDDEN_KEYWORDS = ["baap", "beta", "Batichod", "hydrogen", "energy", "Gand", "papa", "porn", "xxx", "sex", "Bahenchod", "XII", "page", "Madarchod", "meiotic", "divisions", "System.in", "Scanner", "void", "nextInt"]
 
+@bot.on_message()
+async def handle_message(client, message):
+    if any(keyword in message.text for keyword in FORBIDDEN_KEYWORDS):
+        logging.info(f"Deleting message with ID {message.id}")
+        await message.delete()
+      #  user_mention = from_user.mention
+        await message.reply_text(f"@{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
+    elif any(keyword in message.caption for keyword in FORBIDDEN_KEYWORDS):
+        logging.info(f"Deleting message with ID {message.id}")
+        await message.delete()
+       # user_mention = from_user.mention
+        await message.reply_text(f"@{message.from_user.username} 𝖣𝗈𝗇'𝗍 𝗌𝖾𝗇𝖽 𝗇𝖾𝗑𝗍 𝗍𝗂𝗆𝖾!")
 
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command(["bcast"]))
