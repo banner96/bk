@@ -6,6 +6,7 @@ import datetime
 import random
 import asyncio
 import platform
+import logging
 from pytz import timezone
 from pyrogram import filters, Client, idle
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
@@ -18,7 +19,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 API_ID = 23967991
 API_HASH = "a2c3ccfaff4c2dbbff7d54981828d4f1"
-BOT_TOKEN = "7848626329:AAE0XlwVEf91Bp0f3tPGjyh60RvhsiS4-qM"
+BOT_TOKEN = "8151352194:AAHdg9XIwWB4ABP3GjpmBCTKG7rmsdLiOA8"
 DEVS = [1883889098, 7921906677]
 BOT_USERNAME = "Protectorvbot" # change your bot username without 
 OWNER_ID = 7638575366
